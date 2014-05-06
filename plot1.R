@@ -11,6 +11,6 @@ mydf$Datetime <- strptime(paste(mydf$Date,mydf$Time,sep=" "),format="%d/%m/%Y %H
 qry <- subset(mydf,mydf$Datetime >=strptime("2007-02-01 00:00:00",format="%Y-%m-%d %H:%M:%S") & mydf$Datetime < strptime("2007-02-03 00:00:00",format="%Y-%m-%d %H:%M:%S"))
 
 
-png("plot1.png",width=480,height=480)
+png("./ExData_Plotting1/plot1.png",width=480,height=480,bg="transparent")
 with(qry,hist(Global_active_power,col="red",main="Global Active Power",xlab="Global Active Power (kilowatts)"))
 dev.off()

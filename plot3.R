@@ -12,7 +12,7 @@ qry <- subset(mydf,mydf$Datetime >=strptime("2007-02-01 00:00:00",format="%Y-%m-
 
 png("./ExData_Plotting1/plot3.png",width=480,height=480,bg="transparent")
 with(qry,{
-  plot(Datetime,Sub_metering_1,type="l",ylab="Energy sub metering")
+  plot(Datetime,Sub_metering_1,type="l",ylab="Energy sub metering",xlab="")
   lines(Datetime,Sub_metering_2,col="red")
   lines(Datetime,Sub_metering_3,col="blue")
   legend("topright",legend=names(qry)[7:9],lty=1,col=c("black","red","blue"))

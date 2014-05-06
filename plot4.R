@@ -13,9 +13,9 @@ qry <- subset(mydf,mydf$Datetime >=strptime("2007-02-01 00:00:00",format="%Y-%m-
 png("./ExData_Plotting1/plot4.png",width=480,height=480,bg="transparent")
 with(qry,{
   par(mfrow=c(2,2))
-  plot(Datetime,Global_active_power,ylab="Global Active Power",type="l")
+  plot(Datetime,Global_active_power,ylab="Global Active Power",type="l",xlab="")
   plot(Datetime,Voltage,ylab="Voltage",type="l")
-  plot(Datetime,Sub_metering_1,type="l",ylab="Energy sub metering")
+  plot(Datetime,Sub_metering_1,type="l",ylab="Energy sub metering",xlab="")
   lines(Datetime,Sub_metering_2,col="red")
   lines(Datetime,Sub_metering_3,col="blue")
   legend("topright",legend=names(qry)[7:9],lty=1,col=c("black","red","blue"),bty="n")
